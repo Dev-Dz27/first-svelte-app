@@ -4,7 +4,7 @@
       { id: 2, text: 'Build a todo app', done: true },
       { id: 3, text: 'Deploy to production', done: false },
     ];
-  
+
     function addTask(event) {
       event.preventDefault();
       const input = event.target.querySelector('input[type="text"]');
@@ -32,15 +32,15 @@
   
 
 <div>
-    <div class="flex flex-col items-center text-xl">
+    <div class="flex flex-col items-center text-xl mt-8">
       <!-- <h1 class="text-3xl font-bold mb-4">Todo List</h1> -->
       <form on:submit={addTask}>
-        <input type="text" placeholder="Add a new task" class="w-80 border-2 rounded-lg px-4 py-2 mb-4" />
+        <input type="text" placeholder="Add a new task" class="w-80 border-2 rounded-lg px-4 py-2 mb-4 " />
         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Task</button>
       </form>
       <ul class="w-full max-w-md mb-8">
         {#each tasks as task (task.id)}
-          <li class="bg-opacity-20 bg-white backdrop-blur-lg rounded drop-shadow-lg shadow-md my-4 mb-4 p-4 flex justify-between items-center transition duration-150" class:done={task.done}>
+          <li class="bg-opacity-80 bg-white rounded-lg shadow-md my-4 mb-4 p-4 flex justify-between items-center transition duration-150" class:done={task.done}>
             <span class="text-lg">{task.text}</span>
             <div class="flex items-center ">
               <button on:click={() => toggleTaskDone(task.id)} class="{task.done ? 'bg-yellow-500 hover:bg-yellow-700 ' : '  bg-green-500 hover:bg-green-700'} text-white font-bold py-2 px-4 rounded mr-2">{task.done ? 'Undone' : 'Done'}</button>
