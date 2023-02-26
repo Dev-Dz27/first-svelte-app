@@ -12,7 +12,7 @@
 
 <section>
 	<h1 class="text-3xl ">
-		<span class="welcome">
+		<span >
 			<picture>
 				<source srcset={welcome} type="image/webp" />
 				<img src={welcome_fallback} alt="Welcome" />
