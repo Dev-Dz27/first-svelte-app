@@ -33,7 +33,6 @@
 
 <div>
     <div class="flex flex-col items-center text-xl mt-8">
-      <!-- <h1 class="text-3xl font-bold mb-4">Todo List</h1> -->
       <form on:submit={addTask}>
         <input type="text" placeholder="Add a new task" class="w-80 border-2 rounded-lg px-4 py-2 mb-4 " />
         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Task</button>
